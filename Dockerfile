@@ -12,8 +12,8 @@ COPY index.html /usr/share/nginx/html/
 COPY logo_azul.png /usr/share/nginx/html/
 COPY mujer-fitness-usando-el-telefono-movil.jpg /usr/share/nginx/html/
 
-# Expose port 80
-EXPOSE 80
+# Expose port 3000
+EXPOSE 3000
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
