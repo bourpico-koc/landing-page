@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bourpi - Tu App de Gestión Profesional de Planes de Entrenamiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind: bg-blue-50 */
+            color: #010101; /* Color de texto principal */
+        }
+        .bg-brand-primary {
+            background-color: #4DBECD; /* Azul cian */
+        }
+        .text-brand-primary {
+            color: #4DBECD; /* Azul cian */
+        }
+        .hover\:bg-brand-primary-dark:hover {
+            background-color: #3aa6b8; /* Un tono más oscuro del azul cian para hover */
+        }
+        .feature-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .hero-image-container {
+            position: relative;
+            transform: translateY(20px); /* Slightly lift the image */
+            transition: transform 0.3s ease-out;
+        }
+        @media (min-width: 768px) {
+            .hero-content {
+                text-align: left;
+            }
+            .hero-call-to-action {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto px-6 flex items-center justify-between relative">
+            <div class="flex items-center">
+                <img src="logo_azul.png" style="width: 160px;" alt="Bourpi Logo">
+            </div>
+
+            <!-- Hamburger menu button for small screens -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation and action buttons - hidden on mobile by default, flex on md and up -->
+            <div id="mobile-menu" class="hidden md:flex md:items-center md:space-x-8 flex-col md:flex-row absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none py-4 md:py-0 px-6 md:px-0 z-50">
+                <a href="#" class="block text-gray-600 hover:text-brand-primary font-medium py-2 md:py-0">Inicio</a>
+                <a href="#features" class="block text-gray-600 hover:text-brand-primary font-medium py-2 md:py-0">Características</a>
+                <a href="#about" class="block text-gray-600 hover:text-brand-primary font-medium py-2 md:py-0">Nosotros</a>
+                <a href="https://app.bourpi.com" class="block text-gray-600 hover:text-brand-primary font-medium py-2 md:py-0">Iniciar Sesión</a>
+                <div class="flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0"> 
+                    <a href="#" class="bg-brand-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-brand-primary-dark transition duration-300 block text-center mt-2 md:mt-0">¡Regístrate para el Lanzamiento!</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white text-gray-800 py-16 rounded-b-3xl overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center md:justify-between">
+            <div class="hero-content text-center md:text-left md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-gray-900">
+                    La <span class="text-brand-primary">Gestión</span> que tus Entrenamientos y Asesorados Merecen.
+                </h1>
+                <p class="text-xl md:text-2xl mb-4 max-w-3xl mx-auto md:mx-0 text-gray-700">
+                    Bourpi simplifica la creación de planes, el seguimiento detallado de clientes y la optimización de tu negocio.
+                </p>
+                <p class="text-2xl md:text-3xl font-bold mb-8 max-w-3xl mx-auto md:mx-0 text-brand-primary">
+                    ¡Lanzamiento Próximamente!
+                </p>
+                <a href="#" class="bg-brand-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-primary-dark transition duration-300 shadow-lg">
+                    Quiero Saber Más
+                </a>
+            </div>
+            <div class="hero-image-container md:w-1/2 flex justify-center md:justify-end">
+                <img src="mujer-fitness-usando-el-telefono-movil.jpg" alt="Persona entrenando con un teléfono móvil viendo una rutina" class="w-full max-w-md h-auto rounded-xl shadow-2xl border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500 ease-in-out">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Características Poderosas para Tu Éxito Profesional</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-4xl mx-auto">Descubre cómo Bourpi simplificará la gestión de planes de entrenamiento y el seguimiento de tus asesorados, potenciando el éxito de tu gimnasio, centro de fisioterapia o negocio de entrenamiento personal.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature Card 1: Creación y Asignación de Planes de Entrenamiento -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <img src="https://placehold.co/100x60/4DBECD/ffffff?text=Planes" alt="Icono de Creación y Asignación de Planes de Entrenamiento" class="mx-auto mb-6 rounded-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Creación y Asignación de Planes de Entrenamiento</h3>
+                    <p class="text-gray-600">Diseña y asigna planes de entrenamiento detallados y adaptados a cada cliente, paciente o grupo.</p>
+                </div>
+
+                <!-- Feature Card 2: Seguimiento de Progreso -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <img src="https://placehold.co/100x60/010101/4DBECD?text=Progreso" alt="Icono de Seguimiento Integral de Clientes" class="mx-auto mb-6 rounded-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Seguimiento Integral de Asesorados</h3>
+                    <p class="text-gray-600">Registra y visualiza el progreso de tus asesorados (marcas, peso, medidas) de forma clara y efectiva, permitiéndote tomar decisiones informadas.</p>
+                </div>
+
+                <!-- Feature Card 3: Biblioteca de Ejercicios -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <img src="https://placehold.co/100x60/4DBECD/ffffff?text=Video" alt="Icono de Biblioteca de Ejercicios Interactiva" class="mx-auto mb-6 rounded-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Biblioteca de Ejercicios Interactiva</h3>
+                    <p class="text-gray-600">Explora una vasta biblioteca de ejercicios con videos instructivos , garantizando variedad y precisión para todos tus asesorados.</p>
+                </div>
+
+                <!-- Feature Card 4: Herramientas de Gestión para Centros -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <img src="https://placehold.co/100x60/010101/4DBECD?text=Centros" alt="Icono de Herramientas de Gestión para Centros" class="mx-auto mb-6 rounded-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Herramientas de Gestión para Centros</h3>
+                    <p class="text-gray-600">Administra a tus usuarios, planes de entrenamiento y recursos específicos para tu gimnasio o centro de fisioterapia.</p>
+                </div>
+
+                <!-- Feature Card 5: Para Entrenadores Personales -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <img src="https://placehold.co/100x60/4DBECD/ffffff?text=Trainer" alt="Icono de Plataforma para Entrenadores Personales" class="mx-auto mb-6 rounded-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Plataforma para Entrenadores Personales</h3>
+                    <p class="text-gray-600">Centraliza la gestión de tus clientes, comunicación y planificación de sesiones eficazmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action for Launch Notification -->
+    <section class="py-20 text-center bg-brand-primary text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-4">¿Listo para revolucionar la gestión de tu negocio de fitness o fisioterapia?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Bourpi llega para optimizar la creación de planes de entrenamiento, el seguimiento detallado de tus asesorados y la comunicación efectiva.</p>
+            <!-- <a href="#" class="bg-white text-brand-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition duration-300 shadow-lg">Me Interesa, ¡Manténganme Informado!</a> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center md:flex md:justify-between md:items-center">
+            <div class="mb-6 md:mb-0">
+                <span class="text-xl font-bold">Bourpi</span>
+                <p class="text-gray-400 text-sm mt-2">&copy; 2025 Bourpi. Todos los derechos reservados.</p>
+            </div>
+            <div class="flex space-x-6 justify-center">
+                <a href="#" class="text-gray-400 hover:text-brand-primary">Política de Privacidad</a>
+                <a href="#" class="text-gray-400 hover:text-brand-primary">Términos de Servicio</a>
+                <a href="#" class="text-gray-400 hover:text-brand-primary">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked (for smoother navigation on mobile)
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
