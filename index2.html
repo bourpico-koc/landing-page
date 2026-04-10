@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    
+    <title>Bourpi | Software y App para Entrenadores Personales y Gimnasios</title>
+    <meta name="description" content="La herramienta todo-en-uno para gestionar alumnos, crear rutinas en minutos y llevar el progreso de tus asesorados. Descubre el software líder para entrenadores." />
+    <meta name="keywords" content="software para entrenadores, app para crear rutinas, gestión de gimnasios, plataforma fitness, seguimiento de alumnos, progreso fitness" />
+    
+    <meta property="og:title" content="Bourpi | Gestión Profesional para Entrenadores" />
+    <meta property="og:description" content="Crea rutinas, gestiona clientes y analiza su progreso con la app diseñada para entrenar sin distracciones." />
+    <meta property="og:url" content="https://bourpi.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://bourpi.com/og-image.jpg" /> <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#6ddae9",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#006973",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed-dim": "#68d6e5",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-secondary": "#2c3400",
+                        "secondary-container": "#899d00",
+                        "surface-bright": "#3a3939",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#afafaf",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "error-container": "#93000a",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-container": "#414343",
+                        "on-secondary-fixed": "#191e00",
+                        "background": "#141313",
+                        "on-background": "#e5e2e1",
+                        "on-surface-variant": "#bcc9cb",
+                        "on-secondary-fixed-variant": "#414c00",
+                        "secondary-fixed-dim": "#BAD040",
+                        "on-primary": "#00363c",
+                        "on-primary-fixed": "#001f23",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-variant": "#353434",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#93f1ff",
+                        "secondary-fixed": "#d7ee5b",
+                        "surface-dim": "#141313",
+                        "inverse-on-surface": "#313030",
+                        "on-error": "#690005",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-primary-container": "#004a52",
+                        "tertiary": "#cacaca",
+                        "surface": "#141313",
+                        "on-tertiary": "#2f3131",
+                        "secondary": "#BAD040",
+                        "outline": "#879395",
+                        "on-secondary-container": "#282f00",
+                        "surface-tint": "#68d6e5",
+                        "primary-container": "#4dbecd",
+                        "surface-container-highest": "#353434",
+                        "on-primary-fixed-variant": "#004f57",
+                        "outline-variant": "#3d494b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-glow {
+            box-shadow: 0 10px 30px -5px rgba(77, 190, 205, 0.08);
+        }
+        .kinetic-lime-glow {
+            box-shadow: 0 15px 40px -10px rgba(186, 208, 64, 0.3);
+        }
+        .asymmetric-hero {
+            padding-left: 10%;
+        }
+        @media (max-width: 768px) {
+            .asymmetric-hero { padding-left: 1.5rem; }
+        }
+    </style>
+</head>
+<body class="bg-[#010101] text-on-surface font-body selection:bg-secondary selection:text-on-secondary relative">
+    
+    <nav class="fixed top-0 w-full z-50 bg-[#010101]/80 backdrop-blur-xl shadow-[0_10px_30px_-5px_rgba(77,190,205,0.08)]">
+        <div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto font-['Lexend'] tracking-tight">
+            <div class="text-2xl font-black italic text-[#4DBECD] tracking-tighter">Bourpi</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-[#4DBECD] font-bold border-b-2 border-[#4DBECD] pb-1 transition-all duration-300" href="#caracteristicas">Características</a>
+                <a class="text-[#CCCCCC] hover:text-[#4DBECD] transition-colors transition-all duration-300" href="#precios">Precios</a>
+                <a class="text-[#CCCCCC] hover:text-[#4DBECD] transition-colors transition-all duration-300" href="#faq">FAQ</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://app.bourpi.com/#/auth" class="bg-[#BAD040] text-black px-6 py-2 rounded-xl font-bold transition-transform scale-95 hover:scale-100 active:scale-90 inline-block">Registrarme</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 overflow-hidden bg-[#010101]">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -mr-64 -mt-32"></div>
+        <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="asymmetric-hero">
+                <h1 class="font-headline text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tighter mb-6">
+                    Gestiona tus asesorados como un profesional del <span class="text-[#4DBECD]">fitness</span>
+                </h1>
+                <p class="text-tertiary text-xl mb-10 max-w-xl leading-relaxed">
+                    Crea rutinas en minutos, analiza el progreso en tiempo real y lleva el seguimiento de tus asesorados al siguiente nivel con la plataforma líder en rendimiento.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="https://app.bourpi.com/#/auth" class="inline-flex items-center justify-center bg-gradient-to-br from-[#BAD040] to-[#899d00] text-black px-8 py-4 rounded-xl font-extrabold text-lg transition-all hover:scale-105 kinetic-lime-glow">
+                        Empieza a Gestionar Gratis
+                    </a>
+                    <a href="#caracteristicas" class="flex items-center justify-center gap-3 px-8 py-4 rounded-xl border-2 border-outline-variant text-primary font-bold hover:bg-primary/5 transition-colors">
+                        <span class="material-symbols-outlined">play_circle</span>
+                        Ver cómo funciona
+                    </a>
+                </div>
+            </div>
+            <div class="relative group mt-8 lg:mt-0">
+                <div class="absolute inset-0 bg-primary/20 blur-[80px] rounded-full group-hover:bg-primary/30 transition-all"></div>
+                <div class="relative bg-surface-container-low rounded-2xl border border-outline-variant/30 overflow-hidden shadow-2xl transform lg:rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <img alt="Interfaz del software para crear rutinas de gimnasio Bourpi" class="w-full h-auto opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0T1d1K3RArvA0S0sQYA7o_Vow2W8w8Fvch1_QmePja92kAteUY9PfGUZps4L8Fujuvxj8pJ72i8A2dxHcmu4HBwuHDnbcLkveZKytbqdBV7zgpG2-wZbvuPs_H21xXPB6s6lF8OuBCyYj6dJkpjGGN32XBOB6eK5-v06Hs8p9qQs9nP9MtREG8yTy9DwlNlJkcw2OOHwMIozTnMLP_mDNW7Foxyh580fQHXxG4mGwzyr1oYABjZSQzjcnp4eepCKA8ZrtRTqHx5fH"/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="caracteristicas" class="py-24 bg-surface-container-lowest">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="mb-16">
+                <span class="text-[#4DBECD] font-headline font-bold tracking-[0.2em] text-sm uppercase block mb-4">GESTIÓN PRO</span>
+                <h2 class="font-headline text-4xl md:text-5xl font-black max-w-2xl">Domina tu negocio con el Panel de Control Avanzado</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-surface-container p-8 rounded-2xl border-l-4 border-primary transition-all hover:translate-y-[-8px]">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-primary text-3xl">insights</span>
+                    </div>
+                    <h3 class="font-headline text-2xl font-bold mb-4">Seguimiento de Progreso</h3>
+                    <p class="text-tertiary leading-relaxed mb-6">Visualiza la evolución de fuerza, volumen de carga y cumplimiento de tus alumnos con gráficas automáticas.</p>
+                    <img alt="Gráficos de progreso y evolución física para entrenadores" class="w-full h-32 object-cover rounded-xl grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhPP7kfvfqxYxlJ7C4Jl4Gzedpki9hRjwfKs0Z1F1725Q26ciw1aA2r0TwxkaBiKXS2G14AVk_wkugGnCcNphrlcG3l5IGqQnv1oMAQzZZZvCtujVs6Y6CZZ5jUEIIBWLjsqJ6I74IQZTh7YHBD6wSsTM8wp_VaMtLtxC1SVKpmr5qkE5VtzrzcTTGV0z9y0kIE-8si4pMLme5QEXu3tnGfsOuesMKo6GWySOkst4JvyHjZY5a45UF9AGZh_75DMt6k6zDgEavXQpT"/>
+                </div>
+                
+                <div class="bg-surface-container p-8 rounded-2xl border-l-4 border-secondary transition-all hover:translate-y-[-8px]">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-secondary text-3xl">fact_check</span>
+                    </div>
+                    <h3 class="font-headline text-2xl font-bold mb-4">Alertas de Clientela</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high rounded-lg">
+                            <span class="material-symbols-outlined text-error text-sm">warning</span>
+                            <span class="text-sm font-medium">Carlos lleva 3 días sin entrenar</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-surface-container-high rounded-lg">
+                            <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                            <span class="text-sm font-medium">Rutina asignada a Maria</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface-container p-8 rounded-2xl border-l-4 border-primary transition-all hover:translate-y-[-8px]">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined text-primary text-3xl">groups</span>
+                    </div>
+                    <h3 class="font-headline text-2xl font-bold mb-4">Visibilidad de Alumnos</h3>
+                    <p class="text-tertiary leading-relaxed mb-6">Perfiles detallados con historial de carga, RM y adherencia a los planes de entrenamiento.</p>
+                    <div class="flex -space-x-3">
+                        <img alt="Seguimiento de alumno fitness" class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6g51KrsuW9rAu6I5bn5YgMWWYLyA6xLSYa-SCFknxAo7l3RNnNvDc6ohiOvj9fM3XewNougPvyt38A-aZsCaMDagh9h4CV_5we-I8PwK1fRnyuRdInNCHN98lk4cd3mPT0XFwdmINBM1_oi7U2NLoJ0nSbzE2JX0l9FVAN9RCgwgpuFr6LgnWMGXCG6-ZpXnolOVsaJtdusJK-7NKoZ9e9ULkaW8fvklgwEO8nS2SLszOdNJDkFMv_6m4k8pUV0LbrwnOZz-zdQMf"/>
+                        <img alt="Progreso de alumna en app" class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxZsa6QRuIS-bwx-hG-yxCBS-WLUUQaNSlKI1mpx-Hftn8xERZjzoh4mSNZ1E2t_sbNKTxVij1SsdgOPLNwRd0VvehnkP-Lwh2lJK-leRZjGCFV3Y11LybwkPn_Ji4uCakafl9C8ze9ieFmpnflhFB5teL76nyTRhMhdR4WCLL6ngzTiXslxiWOkiXw-m_o_Ez1lU-nTyjIbpQsS2isECbFq9DGjhhcw4qq3xJb_P9eYkjl9bDLsrteHJoR52vqVFW_RHS7_GjrDXI"/>
+                        <img alt="Perfil de entrenador personal" class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEvxcgL2mVR66K9vDycMMmlsAn9Hcxf4De4nWtF2RZu8UJ5bHpoRY0fnzEqnkT3ke5pYMoS_9Ijcw_CkujZN4nbklmrHQ_Ra36i-XO09KrjaANG-eMSGV_bAikl62_Kda0TEDRDkgTFkDrNT6LRMmPeGi3olPCsWBFjhorMtUsnLhKwDh2Ar0l_FPXeJo0ZlWRa0aNEWM7JnFlHi2NjEGNfduOaCfvPi5TPgModbHKE9TVJXuIJI3BNeoyNNoTnqk-c9q3_7V_xFbC"/>
+                        <div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-[10px] font-bold">+24</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#010101] relative">
+        <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <span class="text-[#BAD040] font-headline font-bold tracking-[0.2em] text-sm uppercase block mb-4">ESCALABILIDAD TOTAL</span>
+                <h2 class="font-headline text-4xl md:text-6xl font-black mb-8 leading-tight">Potencia y expande tu asesoría</h2>
+                <ul class="space-y-8">
+                    <li class="flex gap-6">
+                        <div class="shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary">fitness_center</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Editor de Rutinas Avanzado</h4>
+                            <p class="text-tertiary">Diseña bloques de entrenamiento, circuitos y asigna cargas exactas con una interfaz rápida y profesional.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-6">
+                        <div class="shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary">forum</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Comunicación Inteligente</h4>
+                            <p class="text-tertiary">Mantén el contacto, resuelve dudas y fomenta la adherencia de toda tu comunidad desde un solo lugar.</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="https://app.bourpi.com/#/auth" class="mt-12 inline-flex bg-[#BAD040] text-black px-8 py-4 rounded-xl font-black items-center gap-3 hover:opacity-80 transition-all">
+                    Acceder a Mi Negocio <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-1 shadow-2xl">
+                <div class="bg-surface-container-low rounded-xl overflow-hidden">
+                    <div class="p-4 border-b border-outline-variant/20 flex justify-between items-center">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-error/40"></div>
+                            <div class="w-3 h-3 rounded-full bg-secondary/40"></div>
+                            <div class="w-3 h-3 rounded-full bg-primary/40"></div>
+                        </div>
+                        <span class="text-xs text-tertiary/50 uppercase tracking-widest">Dashboard de Clientes</span>
+                    </div>
+                    <table class="w-full text-left text-sm">
+                        <thead class="text-tertiary border-b border-outline-variant/10">
+                            <tr>
+                                <th class="px-6 py-4 font-bold">Cliente</th>
+                                <th class="px-6 py-4 font-bold">Estado</th>
+                                <th class="px-6 py-4 font-bold">Plan Activo</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-outline-variant/10">
+                            <tr class="hover:bg-primary/5 transition-colors">
+                                <td class="px-6 py-4 font-medium">Carlos Ruiz</td>
+                                <td class="px-6 py-4"><span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-[10px]">Entrenando</span></td>
+                                <td class="px-6 py-4 text-tertiary">Hipertrofia Pro</td>
+                            </tr>
+                            <tr class="hover:bg-primary/5 transition-colors">
+                                <td class="px-6 py-4 font-medium">Elena Gomez</td>
+                                <td class="px-6 py-4"><span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px]">Nueva</span></td>
+                                <td class="px-6 py-4 text-tertiary">Pérdida Grasa</td>
+                            </tr>
+                            <tr class="hover:bg-primary/5 transition-colors">
+                                <td class="px-6 py-4 font-medium">Marcos Lima</td>
+                                <td class="px-6 py-4"><span class="px-3 py-1 bg-surface-container-highest text-tertiary rounded-full text-[10px]">Descanso</span></td>
+                                <td class="px-6 py-4 text-tertiary">Fuerza Base</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="py-24 bg-surface-container-lowest">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="font-headline text-4xl md:text-5xl font-black text-center mb-16">Planes diseñados para escalar tu negocio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105 relative overflow-hidden">
+                    <h3 class="text-xl font-bold mb-2 text-white">Prueba Gratis</h3>
+                    <div class="text-3xl font-black text-primary mb-1">$0 <span class="text-sm font-normal text-tertiary">COP</span></div>
+                    <p class="text-[11px] text-[#4DBECD] mb-6 leading-tight italic">*Por 30 días. El reloj inicia al crear tu primera rutina.</p>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Hasta 2 clientes</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Creador de rutinas</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Workout player</li>
+                    </ul>
+                    <a href="https://app.bourpi.com/#/auth" class="w-full py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/10 transition-all text-center block">Empezar Gratis</a>
+                </div>
+
+                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-white">Plan Básico</h3>
+                    <div class="text-3xl font-black text-primary mb-6">$49.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 5 clientes</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Seguimiento real</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Soporte estándar</li>
+                    </ul>
+                    <button disabled class="w-full py-3 rounded-xl bg-surface-container-highest text-tertiary font-bold cursor-not-allowed text-center block border border-outline-variant/50">Pronto</button>
+                </div>
+
+                <div class="bg-surface-container border-2 border-secondary p-8 rounded-2xl flex flex-col relative transition-all hover:scale-105 shadow-[0_0_40px_rgba(186,208,64,0.1)]">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-black text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full">Más Popular</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Plan Pro</h3>
+                    <div class="text-3xl font-black text-secondary mb-6">$89.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> 12 clientes</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Métricas avanzadas</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> App Inmersiva</li>
+                    </ul>
+                    <button disabled class="w-full py-3 rounded-xl bg-surface-container-highest text-tertiary font-bold cursor-not-allowed text-center block border border-outline-variant/50">Pronto</button>
+                </div>
+
+                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-white">Plan Elite</h3>
+                    <div class="text-3xl font-black text-primary mb-6">$119.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Clientes Ilimitados</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Marca Blanca (Logo)</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Soporte Prioritario</li>
+                    </ul>
+                    <button disabled class="w-full py-3 rounded-xl bg-surface-container-highest text-tertiary font-bold cursor-not-allowed text-center block border border-outline-variant/50">Pronto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-[#010101] relative">
+        <div class="max-w-3xl mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="text-[#4DBECD] font-headline font-bold tracking-[0.2em] text-sm uppercase block mb-4">Dudas Resueltas</span>
+                <h2 class="font-headline text-4xl md:text-5xl font-black">Preguntas Frecuentes</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <details class="group bg-surface-container rounded-2xl border border-outline-variant/30 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg select-none">
+                        ¿Cómo funciona la prueba gratuita?
+                        <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-[#BAD040]">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-tertiary leading-relaxed">
+                        Es totalmente gratis durante 30 días para que explores Bourpi a tu ritmo. Tienes acceso a registrar hasta 2 clientes activos y crear todas las rutinas que necesites. Lo mejor de todo es que el reloj de 30 días solo arranca en el momento que creas tu primera rutina.
+                    </div>
+                </details>
+
+                <details class="group bg-surface-container rounded-2xl border border-outline-variant/30 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg select-none">
+                        ¿Mis clientes tienen que pagar por descargar la app?
+                        <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-[#BAD040]">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-tertiary leading-relaxed">
+                        No. La aplicación móvil es 100% gratuita para tus alumnos. Ellos solo deben descargarla en su celular e iniciar sesión con el acceso que tú les generes desde tu panel de control.
+                    </div>
+                </details>
+
+                <details class="group bg-surface-container rounded-2xl border border-outline-variant/30 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg select-none">
+                        ¿Qué incluye exactamente la "Marca Blanca" del Plan Elite?
+                        <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-[#BAD040]">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-tertiary leading-relaxed">
+                        Significa que la aplicación del alumno dejará de tener el branding de Bourpi y pasará a mostrar tu propio logotipo y los colores corporativos de tu negocio. Es la opción ideal para proyectar un estatus ultra-premium.
+                    </div>
+                </details>
+                
+                <details class="group bg-surface-container rounded-2xl border border-outline-variant/30 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg select-none">
+                        ¿Puedo cambiar de plan o cancelar en cualquier momento?
+                        <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-[#BAD040]">expand_more</span>
+                    </summary>
+                    <div class="px-6 pb-6 text-tertiary leading-relaxed">
+                        Sí, Bourpi no tiene contratos de permanencia ni letras pequeñas. Puedes subir, bajar o cancelar tu plan de suscripción mes a mes directamente desde la configuración de tu negocio.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#010101] border-t border-[#3D494B]/20 py-12 px-8">
+        <div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-1">
+                <div class="text-2xl font-black text-[#4DBECD] mb-6">Bourpi</div>
+                <p class="text-tertiary text-xs leading-loose uppercase tracking-widest">
+                    Empoderando a la próxima generación de entrenadores de alto rendimiento.
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Producto</span>
+                <a class="text-[#CCCCCC] hover:text-[#4DBECD] transition-colors text-sm uppercase tracking-widest" href="#caracteristicas">Características</a>
+                <a class="text-[#CCCCCC] hover:text-[#4DBECD] transition-colors text-sm uppercase tracking-widest" href="#precios">Precios</a>
+                <a class="text-[#CCCCCC] hover:text-[#4DBECD] transition-colors text-sm uppercase tracking-widest" href="mailto:soporte@bourpi.com">Soporte</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Legal</span>
+                <a class="text-[#CCCCCC] hover:text-[#4DBECD] transition-colors text-sm uppercase tracking-widest" href="#">Política de Privacidad</a>
+                <a class="text-[#CCCCCC] hover:text-[#4DBECD] transition-colors text-sm uppercase tracking-widest" href="#">Términos de Servicio</a>
+            </div>
+            
+            </div>
+        <div class="max-w-screen-2xl mx-auto mt-12 pt-12 border-t border-outline-variant/10 flex justify-between items-center">
+            <p class="text-[10px] text-tertiary uppercase tracking-widest">© 2024 BOURPI. TODOS LOS DERECHOS RESERVADOS.</p>
+            <div class="flex gap-6">
+                <a href="https://bourpi.com" class="material-symbols-outlined text-tertiary hover:text-primary cursor-pointer text-lg transition-colors">public</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573004307924?text=Hola%20equipo%20Bourpi,%20me%20gustaría%20saber%20más%20sobre%20los%20planes%20y%20la%20plataforma."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-[0_10px_30px_-5px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_15px_40px_-5px_rgba(37,211,102,0.6)] transition-all duration-300 group">
+        
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+
+        <span class="absolute right-16 bg-surface-container border border-outline-variant/30 text-white text-xs px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-bold">
+            ¿Dudas? Habla con nosotros
+        </span>
+    </a>
+</body>
+</html>

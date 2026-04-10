@@ -1,23 +1,22 @@
-# Bourpi Landing Page
+﻿# Bourpi Landing Page
 
 Landing page estática para Bourpi - Plataforma de gestión profesional de planes de entrenamiento.
 
-## 📁 Estructura
+##  Estructura
 
 ```
 landing_page/
-├── index.html                          # Página principal
-├── logo_azul.png                       # Logo de Bourpi
-├── mujer-fitness-usando-el-telefono-movil.jpg  # Imagen hero
-├── Dockerfile                          # Configuración Docker
-├── nginx.conf                          # Configuración Nginx
-├── docker-compose.yml                  # Orquestación Docker
-├── .dockerignore                       # Archivos a ignorar en Docker
-├── .gitignore                          # Archivos a ignorar en Git
-└── DEPLOY.md                          # Guía de deployment
+ index.html                          # Página principal
+ logo_azul.png                       # Logo de Bourpi
+ mujer-fitness-usando-el-telefono-movil.jpg  # Imagen hero
+ Dockerfile                          # Configuración Docker
+ nginx.conf                          # Configuración Nginx
+ docker-compose.yml                  # Orquestación Docker
+ .dockerignore                       # Archivos a ignorar en Docker
+ DEPLOY.md                          # Guía de deployment
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Local Development
 
@@ -38,16 +37,28 @@ http://localhost:8080
 docker-compose up -d
 ```
 
-## 📋 Características de Nginx
+##  Precio dinámico y CTA
 
-- ✅ Compresión Gzip (reducción ~70%)
-- ✅ Cache para assets estáticos (30 días)
-- ✅ Headers de seguridad
-- ✅ Soporte para SPA routing
-- ✅ Logs de acceso y errores
-- ✅ Rechazo de archivos ocultos
+- La sección de precios carga planes desde:
+  `https://api.bourpi.com/v1/system-plans?enabled=true`
+- Se muestra:
+  - Nombre
+  - Máximo clientes (o "Ilimitado" cuando `maxClients >= 99999`)
+  - Estado (activo/deshabilitado)
+- CTA de cada plan apunta a: `https://app.bourpi.com/#/auth`
+- La página ofrece botón de contacto por WhatsApp en ruta:
+  `https://wa.me/521XXXXXXXXXX` (reemplazar número real).
 
-## 🌐 Deployment en Colify VPS
+##  Características de Nginx
+
+-  Compresión Gzip (reducción ~70%)
+-  Cache para assets estáticos (30 días)
+-  Headers de seguridad
+-  Soporte para SPA routing
+-  Logs de acceso y errores
+-  Rechazo de archivos ocultos
+
+##  Uso en producción
 
 Ver [DEPLOY.md](DEPLOY.md) para instrucciones completas.
 
@@ -64,6 +75,6 @@ docker build -t bourpi-landing:latest .
 docker run -d --name bourpi-landing -p 80:80 --restart always bourpi-landing:latest
 ```
 
-## 📞 Contacto
+##  Contacto
 
-© 2025 Bourpi. Todos los derechos reservados.
+ 2025 Bourpi. Todos los derechos reservados.
