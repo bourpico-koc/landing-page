@@ -13,6 +13,7 @@ COPY logo_azul.png /usr/share/nginx/html/
 COPY mujer-fitness-usando-el-telefono-movil.jpg /usr/share/nginx/html/
 COPY dashboard.png /usr/share/nginx/html/
 COPY bourpi.gif /usr/share/nginx/html/
+COPY privacy.html /usr/share/nginx/html/
 
 # Expose port 3000
 EXPOSE 3000
