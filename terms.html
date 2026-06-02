@@ -7,9 +7,45 @@
     <!-- Importamos Tailwind CSS para mantener la consistencia visual -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #0B0F19; /* Fondo oscuro a juego con tu landing */
+       body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #111;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+            font-size: 28px;
+        }
+        h3 {
+            color: #222;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        p, li {
+            font-size: 16px;
+            color: #4a4a4a;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .date {
+            font-style: italic;
+            color: #777;
         }
     </style>
 </head>
@@ -34,7 +70,7 @@
 
             <!-- Sección 1 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">1. Objeto del Servicio</h2>
+                <h3 class="text-xl font-bold text-white">1. Objeto del Servicio</h3>
                 <p>
                     Boúrpi es una plataforma tecnológica diseñada para la optimización, gestión y seguimiento de rutinas de ejercicio y entrenamiento físico. El servicio se proporciona a través de nuestra aplicación móvil y canales digitales relacionados.
                 </p>
@@ -42,7 +78,7 @@
 
             <!-- Sección 2: El blindaje de salud -->
             <section class="space-y-3 bg-red-950/20 border border-red-900/30 p-5 rounded-xl">
-                <h2 class="text-xl font-bold text-red-400">2. Descargo de Responsabilidad Médica y de Salud</h2>
+                <h3 class="text-xl font-bold text-red-400">2. Descargo de Responsabilidad Médica y de Salud</h3>
                 <p class="text-gray-300">
                     <strong>POR FAVOR LEA ESTO DETENIDAMENTE:</strong> Boúrpi es estrictamente una herramienta de software y apoyo logístico para el entrenamiento. 
                 </p>
@@ -55,7 +91,7 @@
 
             <!-- Sección 3 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">3. Registro, Cuentas y Seguridad</h2>
+                <h3 class="text-xl font-bold text-white">3. Registro, Cuentas y Seguridad</h3>
                 <p>
                     Para utilizar las funciones de Boúrpi, es necesario crear una cuenta de usuario. Usted se compromete a proporcionar información verídica y a mantener actualizados sus datos.
                 </p>
@@ -66,7 +102,7 @@
 
             <!-- Sección 4 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">4. Propiedad Intelectual</h2>
+                <h3 class="text-xl font-bold text-white">4. Propiedad Intelectual</h3>
                 <p>
                     Todo el contenido, arquitectura de software, código fuente, interfaces gráficas, logotipos, isotipos, la marca "Boúrpi" y los elementos de diseño son propiedad exclusiva de sus creadores y están protegidos por las leyes de propiedad intelectual nacionales e internacionales. 
                 </p>
@@ -77,7 +113,7 @@
 
             <!-- Sección 5 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">5. Uso Aceptable y Contenido del Usuario</h2>
+                <h3 class="text-xl font-bold text-white">5. Uso Aceptable y Contenido del Usuario</h3>
                 <p>
                     En caso de que la plataforma permita la creación o carga de contenidos por parte del usuario (como nombres de ejercicios, descripciones de rutinas o notas de texto), usted garantiza que posee los derechos necesarios sobre dicha información y que esta no infringe derechos de terceros.
                 </p>
@@ -88,7 +124,7 @@
 
             <!-- Sección 6 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">6. Limitación de Responsabilidad Técnica</h2>
+                <h3 class="text-xl font-bold text-white">6. Limitación de Responsabilidad Técnica</h3>
                 <p>
                     Boúrpi se proporciona "tal cual" y "según disponibilidad". No garantizamos que el servicio sea ininterrumpido, 100% seguro o libre de fallos técnicos de servidor. No nos hacemos responsables de las pérdidas de datos causadas por interrupciones del servicio ajenas a nuestro control directo o por fallos en la conectividad del usuario.
                 </p>
@@ -96,7 +132,7 @@
 
             <!-- Sección 7 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">7. Modificaciones a los Términos</h2>
+                <h3 class="text-xl font-bold text-white">7. Modificaciones a los Términos</h3>
                 <p>
                     Nos reservamos el derecho de modificar o actualizar estos Términos y Condiciones en cualquier momento para adaptarlos a novedades legislativas o mejoras del software. Las variaciones importantes le serán notificadas a través de la aplicación o mediante los canales de contacto proporcionados. El uso continuado de la app tras dichos cambios constituye la aceptación de los nuevos términos.
                 </p>
@@ -104,7 +140,7 @@
 
             <!-- Sección 8: Marco Legal Local -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">8. Ley Aplicable y Jurisdicción</h2>
+                <h3 class="text-xl font-bold text-white">8. Ley Aplicable y Jurisdicción</h3>
                 <p>
                     Estos Términos y Condiciones se rigen e interpretan de conformidad con las <strong>leyes de la República de Colombia</strong>. Cualquier conflicto, controversia o reclamación derivada de la interpretación o ejecución de este documento será sometida a la jurisdicción de los tribunales competentes de Colombia, renunciando expresamente a cualquier otro fuero que pudiera corresponder.
                 </p>
@@ -112,7 +148,7 @@
 
             <!-- Sección 9 -->
             <section class="space-y-3">
-                <h2 class="text-xl font-bold text-white">9. Contacto</h2>
+                <h3 class="text-xl font-bold text-white">9. Contacto</h3>
                 <p>
                     Si tiene alguna duda o consulta jurídica respecto a estos Términos y Condiciones, puede ponerse en contacto con nosotros a través del correo de soporte habilitado en nuestra plataforma.
                 </p>
