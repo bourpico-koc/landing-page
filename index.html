@@ -272,53 +272,70 @@
 
     <section id="precios" class="py-24 bg-surface-container-lowest">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <h2 class="font-headline text-4xl md:text-5xl font-black text-center mb-16">Planes diseñados para escalar tu negocio</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105 relative overflow-hidden">
-                    <h3 class="text-xl font-bold mb-2 text-white">Prueba Gratis</h3>
-                    <div class="text-3xl font-black text-primary mb-1">$0 <span class="text-sm font-normal text-tertiary">COP</span></div>
-                    <p class="text-[11px] text-[#4DBECD] mb-6 leading-tight italic">*Por 30 días. El reloj inicia al crear tu primera rutina.</p>
-                    <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Hasta 2 clientes</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Creador de rutinas</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Workout player</li>
-                    </ul>
-                    <a href="https://app.bourpi.com/#/auth" class="w-full py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/10 transition-all text-center block">Empezar Gratis</a>
-                </div>
+            <h2 class="font-headline text-4xl md:text-5xl font-black text-center mb-6">Planes diseñados para escalar tu negocio</h2>
 
-                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105">
-                    <h3 class="text-xl font-bold mb-2 text-white">Plan Básico</h3>
-                    <div class="text-3xl font-black text-primary mb-6">$49.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+            <div class="max-w-4xl mx-auto mb-16 bg-gradient-to-r from-[#1a2a2d] to-[#1c2620] border border-primary/20 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px]"></div>
+                <div class="relative z-10 text-center md:text-left">
+                    <h3 class="font-headline text-2xl md:text-3xl font-black text-white mb-2">¿Quieres probar la experiencia Boúrpi?</h3>
+                    <p class="text-tertiary leading-relaxed max-w-xl">Crea tu cuenta hoy y obtén un <span class="text-primary font-bold">Plan de Prueba Gratis por 30 días</span>. Registra hasta 5 alumnos activos y automatiza tus rutinas sin pagar nada. No requerimos tarjeta de crédito.</p>
+                </div>
+                <button disabled class="relative z-10 shrink-0 inline-flex items-center justify-center bg-surface-container-highest text-tertiary px-8 py-4 rounded-xl font-extrabold text-lg cursor-not-allowed whitespace-nowrap border border-outline-variant/50">Pronto</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105 relative overflow-hidden">
+                    <h3 class="font-headline text-xl font-bold mb-2 text-white">Starter</h3>
+                    <div class="text-3xl font-black text-primary mb-1">$49.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                    <p class="text-xs text-tertiary mb-6 leading-relaxed">Ideal para entrenadores independientes que lanzan sus primeras asesorías online.</p>
                     <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 5 clientes</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Seguimiento real</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Soporte estándar</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Hasta 15 alumnos activos en plataforma.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Creación, edición y entrega de rutinas ilimitadas desde el panel web.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Acceso total y descarga de la App Móvil para tus alumnos.</li>
                     </ul>
                     <button disabled class="w-full py-3 rounded-xl bg-surface-container-highest text-tertiary font-bold cursor-not-allowed text-center block border border-outline-variant/50">Pronto</button>
                 </div>
 
                 <div class="bg-surface-container border-2 border-secondary p-8 rounded-2xl flex flex-col relative transition-all hover:scale-105 shadow-[0_0_40px_rgba(186,208,64,0.1)]">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-black text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full">Más Popular</div>
-                    <h3 class="text-xl font-bold mb-2 text-white">Plan Pro</h3>
-                    <div class="text-3xl font-black text-secondary mb-6">$89.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-black text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full">Recomendado</div>
+                    <h3 class="font-headline text-xl font-bold mb-2 text-white">Pro</h3>
+                    <div class="text-3xl font-black text-secondary mb-1">$89.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                    <p class="text-xs text-tertiary mb-6 leading-relaxed">Automatiza tu flujo de trabajo y gestiona más alumnos sin perder el control de tu comunidad.</p>
                     <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> 12 clientes</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Métricas avanzadas</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> App Inmersiva</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">check_circle</span> Desde 16 hasta 50 alumnos activos en plataforma.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">check_circle</span> Todo lo incluido en el plan Starter.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">check_circle</span> Control visual y alertas del estado de pagos de tus alumnos.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-lg mt-0.5 shrink-0">check_circle</span> Visualización de respuestas y progreso diario de los entrenamientos en tiempo real.</li>
                     </ul>
                     <button disabled class="w-full py-3 rounded-xl bg-surface-container-highest text-tertiary font-bold cursor-not-allowed text-center block border border-outline-variant/50">Pronto</button>
                 </div>
 
-                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105">
-                    <h3 class="text-xl font-bold mb-2 text-white">Plan Elite</h3>
-                    <div class="text-3xl font-black text-primary mb-6">$119.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105 relative overflow-hidden">
+                    <h3 class="font-headline text-xl font-bold mb-2 text-white">Élite</h3>
+                    <div class="text-3xl font-black text-primary mb-1">$149.900 <span class="text-sm font-normal text-tertiary">COP/mes</span></div>
+                    <p class="text-xs text-tertiary mb-6 leading-relaxed">Diseñado para entrenadores con comunidades consolidadas y alto volumen de asesorados.</p>
                     <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Clientes Ilimitados</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Marca Blanca (Logo)</li>
-                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Soporte Prioritario</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Desde 51 hasta 150 alumnos activos en plataforma.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Todo lo incluido en el plan Pro.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Canal de soporte técnico preferencial y prioritario con nuestro equipo de desarrollo.</li>
                     </ul>
                     <button disabled class="w-full py-3 rounded-xl bg-surface-container-highest text-tertiary font-bold cursor-not-allowed text-center block border border-outline-variant/50">Pronto</button>
                 </div>
+
+                <div class="bg-surface-container border border-outline-variant/30 p-8 rounded-2xl flex flex-col transition-all hover:scale-105 relative overflow-hidden">
+                    <h3 class="font-headline text-xl font-bold mb-2 text-white">Enterprise / Centros Deportivos</h3>
+                    <div class="text-2xl font-black text-primary mb-1">A la medida</div>
+                    <p class="text-xs text-tertiary mb-6 leading-relaxed">Soluciones robustas para gimnasios comerciales, centros de crossfit o marcas con grandes flujos de usuarios concurrentes (500+ alumnos).</p>
+                    <ul class="space-y-4 mb-8 text-sm flex-grow text-white">
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Más de 150 alumnos o requerimiento de infraestructura dedicada.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Panel Multi-Entrenador: Asignación y control de múltiples entrenadores bajo una misma administración central.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Garantía de rendimiento: Aislamiento y optimización de Base de Datos para soportar alto tráfico simultáneo en hora pico.</li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg mt-0.5 shrink-0">check_circle</span> Onboarding y acompañamiento técnico personalizado para todo el staff de tu centro deportivo.</li>
+                    </ul>
+                    <button disabled class="w-full py-3 rounded-xl bg-surface-container-highest text-tertiary font-bold cursor-not-allowed text-center block border border-outline-variant/50">Pronto</button>
+                </div>
+
             </div>
         </div>
     </section>
@@ -337,7 +354,7 @@
                         <span class="material-symbols-outlined transition duration-300 group-open:-rotate-180 text-[#BAD040]">expand_more</span>
                     </summary>
                     <div class="px-6 pb-6 text-tertiary leading-relaxed">
-                        Es totalmente gratis durante 30 días para que explores Bourpi a tu ritmo. Tienes acceso a registrar hasta 2 clientes activos y crear todas las rutinas que necesites. Lo mejor de todo es que el reloj de 30 días solo arranca en el momento que creas tu primera rutina.
+                        Es totalmente gratis durante 30 días para que explores Bourpi a tu ritmo. Tienes acceso a registrar hasta 5 alumnos activos y crear todas las rutinas que necesites. Lo mejor de todo es que el reloj de 30 días solo arranca en el momento que creas tu primera rutina.
                     </div>
                 </details>
 
